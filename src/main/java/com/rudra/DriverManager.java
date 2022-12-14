@@ -22,11 +22,11 @@ public class DriverManager extends Utils{
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
     String browser = LoadProp.getProperty("Browser");
     //    String browserName = System.getProperty("browser");
-    boolean runIncloud = Boolean.parseBoolean(LoadProp.getProperty("cloud"));
+    boolean runInCloud = Boolean.parseBoolean(LoadProp.getProperty("cloud"));
     MutableCapabilities capabilities = new MutableCapabilities();
     public void openBrowser(){
         //Run in a cloud-----------------------------------------------------
-        if (runIncloud){
+        if (runInCloud){
             System.out.println("Running in the cloud");
             //Connect to cloud
             if (browser.equalsIgnoreCase("Edge")) {
